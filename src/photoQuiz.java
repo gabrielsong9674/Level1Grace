@@ -21,13 +21,18 @@ public class photoQuiz {
 		// 4. add the image to the quiz window
 		image.setVisible(true);
 		// 5. call the pack() method on the quiz window
-		
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-		
+		String answer = JOptionPane.showInputDialog("What type of dog is this?");
 		// 7. print "CORRECT" if the user gave the right answer
-		
+
 		// 8. print "INCORRECT" if the answer is wrong
-		
+	if(answer.equals("dachshund")) {
+		System.out.println("Correct");
+	}
+	else {
+		System.out.println("Incorrect");
+	}
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
 		
 		// 10. find another image and create it (might take more than one line of code)
