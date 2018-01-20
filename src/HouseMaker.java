@@ -21,6 +21,7 @@ public void makeHouse(int height) {
 	}
 	r.move(height);
 	r.turn(-90);
+	r.setPenColor(Color.green);
 	r.move(50);
 	r.turn(-90);
 	
@@ -55,9 +56,9 @@ public void makeHouseColor(String color) {
 
 public void drawPointyRoof() {
 	r.turn(-45);
-	r.move(25);
+	r.move(50);
 	r.turn(90);
-	r.move(25);
+	r.move(50);
 	r.turn(45);
 	
 }
