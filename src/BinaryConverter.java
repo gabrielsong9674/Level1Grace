@@ -19,8 +19,9 @@ public class BinaryConverter implements ActionListener {
 	JPanel panel = new JPanel();
 	JLabel label = new JLabel();
 	JTextField answer = new JTextField(20);
+	JTextField conversion = new JTextField(20);
 	JButton button = new JButton();
-
+	String input;
 	public void createUI() {
 		frame.add(panel);
 		frame.setVisible(true);
@@ -30,8 +31,8 @@ public class BinaryConverter implements ActionListener {
 		button.addActionListener(this);
 		panel.add(answer);
 		panel.add(button);
+		panel.add(conversion);
 		frame.setTitle("Converting 8 bits of binary to ASCII");
-		String input = answer.getText();
 		frame.pack();
 		
 	}
@@ -57,9 +58,9 @@ public class BinaryConverter implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent arg0) {
-		JButton buttonPressed = (JButton) arg0.getSource();
-		if (buttonPressed == button) {
-	
+		input = answer.getText();
+		if (arg0.getSource() == button) {
+		conversion.setText(convert(input));
 		}
 	}
 
